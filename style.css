@@ -1,0 +1,247 @@
+:root {
+  --white: #fff;
+  --main-text: #222;
+  --sign-in: #1a73e8;
+  --sign-in-hover: #237ef5;
+  --sign-in-click: #4897fd;
+  --waffle-hover: #ebebeb;
+  --waffle-click: #d6d6d6;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text);
+  font-weight: 300;
+}
+
+body {
+  height:100%;
+  background-color: var(--white);
+  font-family: Arial, sans-serif;
+  color: var(--main-text);
+}
+
+input {
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+}
+
+/* NAVBAR */
+
+.navbar .flex {
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar .sign-in:hover {
+  text-decoration: none;
+}
+
+.left-nav a {
+  margin-right: 10px;
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.right-nav a:not(.sign-in) {
+  font-size: 13px;
+  margin-right: 14px;
+}
+
+.sign-in {
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--sign-in);
+  padding: 10px 25px;
+  border-radius: 4px;
+}
+
+.sign-in:hover {
+  background-color: var(--sign-in-hover);
+  box-shadow: 0px 1px 5px -1px var(--sign-in-hover);
+}
+
+.sign-in:active {
+  background-color: var(--sign-in-click);
+}
+
+.waffle-icon {
+  padding: 12px 7px 10px 7px;
+}
+
+.waffle-icon img {
+  cursor: pointer;
+  margin-bottom: -20px;
+  position: relative;
+  top: -14px;
+}
+
+.waffle-icon img {
+  height: 24px;
+  width: 24px;
+}
+
+.filter-waffle {
+  filter: invert(9%) sepia(1%) saturate(341%) hue-rotate(327deg) brightness(98%)
+    contrast(30%);
+}
+
+.waffle-icon:hover {
+  background-color: var(--waffle-hover);
+  border-radius: 100%;
+}
+
+.waffle-icon:active {
+  background-color: var(--waffle-click);
+}
+
+/* MAIN BODY */
+
+.main .flex {
+  max-height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 158px;
+}
+
+.google-image {
+  position: absolute;
+  top: 40px;
+}
+
+.search-box:hover {
+  box-shadow: 0 1px 5px 0 rgba(32, 33, 36, 0.28);
+}
+
+.search-box {
+  background-color: transparent;
+  border: 1px #dfe1e5 solid;
+  border-radius: 25px;
+  padding: 5px;
+  padding-left: 50px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.search-box input {
+  width: 528px;
+  height: 34px;
+  font-size: 16px;
+}
+
+.search-icon {
+  height: 20px;
+  position: absolute;
+  left: 15px;
+}
+
+.search-icon {
+  filter: invert(71%) sepia(5%) saturate(425%) hue-rotate(169deg) brightness(91%) contrast(84%);
+}
+
+.search-voice {
+  height: 24px;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+.buttons-container {
+  height: 100px;
+  margin-top: 29px;
+}
+
+.search-buttons {
+  padding: 10px 14px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 6px;
+  color: #3c4043;
+  border: 1px solid transparent; /*This makes it so that the border below in the hover section doesn't push the buttons around when hovered*/
+}
+
+.search-buttons:hover {
+  color: black;
+  border: 1px #dfe1e5 solid;
+  box-shadow: 0px 3px 2px -3px #9D9EA0;
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  background-color: #f2f2f2;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 20px 0 20px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px #dadce0 solid;
+}
+
+.footer a {
+  max-width: 98%;
+  color:#70757a;
+  font-size: 14px;
+  margin: 13px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 780px) {
+  .search-box { 
+    width: 80%;
+  }
+  .search-box input { 
+    width: 100%;
+  }
+
+  .navbar {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer {
+    flex-direction: column;
+    height: 110px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+}
+
+/* OTHER */
+.container {
+  max-width: 98%;
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
